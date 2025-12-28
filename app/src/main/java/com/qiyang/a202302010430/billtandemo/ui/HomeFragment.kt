@@ -40,14 +40,10 @@ class HomeFragment : Fragment() {
         return view
     }
     
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         
         billViewModel = ViewModelProvider(this).get(BillViewModel::class.java)
-        
-        // 初始化为空适配器，避免"没有附加适配器"警告
-        recentRecordAdapter = RecentRecordAdapter(emptyList())
-        rvRecentRecords.adapter = recentRecordAdapter
         
         // 加载当月记录
         billViewModel.loadCurrentMonthRecords()

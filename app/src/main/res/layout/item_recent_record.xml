@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:justifyContent="space-between"
+        android:alignItems="center">
 
         <TextView
             android:id="@+id/tv_category"
@@ -36,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:justifyContent="space-between"
         android:layout_marginTop="8dp">
 
         <TextView

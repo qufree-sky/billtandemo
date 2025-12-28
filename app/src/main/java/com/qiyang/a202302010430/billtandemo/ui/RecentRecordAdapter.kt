@@ -41,7 +41,7 @@ class RecentRecordAdapter(private val records: List<BillRecord>) : RecyclerView.
         holder.tvDate.text = dateFormat.format(record.date)
         
         // 设置备注
-        holder.tvNote.text = record.remark
+        holder.tvNote.text = record.note
     }
 
     override fun getItemCount(): Int = records.size

@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.qiyang.a202302010430.billtandemo.R
 import com.qiyang.a202302010430.billtandemo.viewmodel.BillViewModel
-import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -52,8 +52,8 @@ class MeFragment : Fragment() {
         return view
     }
     
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         
         billViewModel = ViewModelProvider(this).get(BillViewModel::class.java)
         setupUI()
@@ -77,11 +77,10 @@ class MeFragment : Fragment() {
     }
     
     private fun exportData() {
-        val context = requireContext()
-        Toast.makeText(context, "正在导出数据...", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "正在导出数据...", Toast.LENGTH_SHORT).show()
         
         // 在后台线程执行数据导出
-        lifecycleScope.launch(Dispatchers.IO) {
+        CoroutineScope(Dispatchers.IO).launch {
             try {
                 // 获取所有记账记录
                 val records = billViewModel.getAllRecords()
@@ -99,7 +98,7 @@ class MeFragment : Fragment() {
                 val headerStyle = workbook.createCellStyle()
                 val headerFont = workbook.createFont()
                 headerFont.bold = true
-                headerFont.fontHeightInPoints = 12.toShort()
+                headerFont.fontHeightInPoints = 12f
                 headerStyle.setFont(headerFont)
                 headerStyle.alignment = HorizontalAlignment.CENTER
                 headerStyle.verticalAlignment = VerticalAlignment.CENTER
@@ -120,7 +119,7 @@ class MeFragment : Fragment() {
                     val row = sheet.createRow(rowNum++)
                     
                     // ID
-                    row.createCell(0).setCellValue(record.id.toDouble())
+                    row.createCell(0).setCellValue(record.id)
                     
                     // 类型
                     val typeStr = if (record.type == 1) "收入" else "支出"
@@ -142,7 +141,7 @@ class MeFragment : Fragment() {
                 
                 // 创建文件路径
                 val fileName = "橙子记账_${fileNameFormat.format(Date())}.xlsx"
-                val file = File(context.getExternalFilesDir(null), fileName)
+                val file = File(requireContext().getExternalFilesDir(null), fileName)
                 
                 // 写入文件
                 val fos = FileOutputStream(file)
@@ -152,13 +151,13 @@ class MeFragment : Fragment() {
                 
                 // 显示成功提示
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(context, "数据导出成功，文件保存路径：${file.absolutePath}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(), "数据导出成功，文件保存路径：${file.absolutePath}", Toast.LENGTH_LONG).show()
                 }
                 
             } catch (e: Exception) {
                 e.printStackTrace()
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(context, "数据导出失败：${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "数据导出失败：${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }

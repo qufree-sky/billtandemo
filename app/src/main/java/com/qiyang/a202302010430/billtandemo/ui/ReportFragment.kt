@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.*
-import com.github.mikephil.charting.components.Legend
 import com.qiyang.a202302010430.billtandemo.R
 import com.qiyang.a202302010430.billtandemo.viewmodel.BillViewModel
 
@@ -53,8 +52,8 @@ class ReportFragment : Fragment() {
         return view
     }
     
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         
         billViewModel = ViewModelProvider(this).get(BillViewModel::class.java)
         
@@ -239,7 +238,6 @@ class ReportFragment : Fragment() {
         lineChart.axisLeft.labelCount = 5
         lineChart.axisRight.isEnabled = false
         lineChart.legend.isEnabled = true
-        // TODO: Fix legend position setting
-        // lineChart.legend.position = Legend.LegendPosition.TOP
+        lineChart.legend.position = com.github.mikephil.charting.components.Legend.LegendPosition.TOP
     }
 }

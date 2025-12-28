@@ -47,8 +47,8 @@ class BudgetFragment : Fragment() {
         return view
     }
     
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         
         billViewModel = ViewModelProvider(this).get(BillViewModel::class.java)
         
