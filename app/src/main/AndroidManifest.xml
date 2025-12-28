@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 不需要外部存储权限，因为我们使用app的私有存储目录 -->
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"

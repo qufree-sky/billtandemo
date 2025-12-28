@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.qiyang.a202302010430.billtandemo.data.dao.BillCategoryDao
 import com.qiyang.a202302010430.billtandemo.data.dao.BillRecordDao
 import com.qiyang.a202302010430.billtandemo.data.dao.BudgetDao
@@ -14,6 +15,7 @@ import com.qiyang.a202302010430.billtandemo.data.entity.Budget
 /**
  * Room数据库实例
  */
+@TypeConverters(DateTypeConverter::class)
 @Database(
     entities = [BillRecord::class, BillCategory::class, Budget::class],
     version = 1,

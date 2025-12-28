@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -18,8 +19,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            // 确保debug构建也进行APK对齐
+            isZipAlignEnabled = true
+        }
         release {
             isMinifyEnabled = false
+            isZipAlignEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -48,11 +54,14 @@ dependencies {
     // Room数据库依赖
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
     
     // Kotlin协程依赖
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    
+    // ViewModel依赖
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     
     // MPAndroidChart图表库依赖
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
