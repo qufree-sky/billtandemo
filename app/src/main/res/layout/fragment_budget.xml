@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.BudgetFragment">
+
+    <!-- 预算标题 -->
+    <TextView
+        android:id="@+id/tv_budget_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="预算管理"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 当前月份 -->
+    <TextView
+        android:id="@+id/tv_current_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前月份"
+        android:textSize="18sp"
+        android:textColor="@color/gray"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_budget_title" />
+
+    <!-- 预算金额输入 -->
+    <LinearLayout
+        android:id="@+id/ll_budget_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_month">
+
+        <TextView
+            android:id="@+id/tv_budget_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="月度预算："
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_budget_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入预算金额"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:gravity="center" />
+            
+    </LinearLayout>
+
+    <!-- 已使用金额 -->
+    <LinearLayout
+        android:id="@+id/ll_used_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_budget_amount">
+
+        <TextView
+            android:id="@+id/tv_used_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已使用："
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_used_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¥0.00"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/orange" />
+            
+    </LinearLayout>
+
+    <!-- 剩余金额 -->
+    <LinearLayout
+        android:id="@+id/ll_remaining_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_used_amount">
+
+        <TextView
+            android:id="@+id/tv_remaining_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余："
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_remaining_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¥0.00"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/green" />
+            
+    </LinearLayout>
+
+    <!-- 预算进度条 -->
+    <ProgressBar
+        android:id="@+id/pb_budget_progress"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:progress="0"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progress_bar_horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_remaining_amount" />
+
+    <!-- 保存按钮 -->
+    <Button
+        android:id="@+id/btn_save_budget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存预算"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@color/orange"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_budget_progress"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
