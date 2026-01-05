@@ -44,7 +44,7 @@ interface BillRecordDao {
     
     // 根据日期范围获取记账记录
     @Query("SELECT * FROM bill_records WHERE date BETWEEN :startDate AND :endDate ORDER BY date DESC")
-    suspend fun getRecordsByDateRange(startDate: Date, endDate: Date): List<BillRecord>
+    suspend fun getRecordsByDateRange(startDate: Long, endDate: Long): List<BillRecord>
     
     // 根据月份获取记账记录（格式：yyyy-MM）
     @Query("SELECT * FROM bill_records WHERE strftime('%Y-%m', date/1000, 'unixepoch') = :month ORDER BY date DESC")

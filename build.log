@@ -1,0 +1,86 @@
+﻿Initialized native services in: C:\Users\17432\.gradle\native
+Initialized jansi services in: C:\Users\17432\.gradle\native
+Found daemon DaemonInfo{pid=55136, address=[c19426de-9e30-4948-8b90-1650bb951a4a port:63653, addresses:[/127.0.0.1]], state=Idle, lastBusy=1766996550549, context=DefaultDaemonContext[uid=37c9d913-9fbc-4304-be60-38229c5b29b5,javaHome=D:\Program Files\Java\jdk-25,javaVersion=25,javaVendor=Oracle Corporation,daemonRegistryDir=C:\Users\17432\.gradle\daemon,pid=55136,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=CN,-Duser.language=zh,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Java\jdk-17 (from org.gradle.java.home), daemonOpts=[-Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=CN, -Duser.language=zh, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=37c9d913-9fbc-4304-be60-38229c5b29b5,javaHome=D:\Program Files\Java\jdk-25,javaVersion=25,javaVendor=Oracle Corporation,daemonRegistryDir=C:\Users\17432\.gradle\daemon,pid=55136,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+
+  Looking for a different daemon...
+Found daemon DaemonInfo{pid=79344, address=[6c10b3c4-f1f8-49b8-9877-9280b6789eaf port:62633, addresses:[/127.0.0.1]], state=Idle, lastBusy=1766996232045, context=DefaultDaemonContext[uid=998a123b-4d6f-4e09-8deb-62ac344439a9,javaHome=D:\soft\android\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\17432\.gradle\daemon,pid=79344,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=CN,-Duser.language=zh,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Java\jdk-17 (from org.gradle.java.home), daemonOpts=[-Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=CN, -Duser.language=zh, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=998a123b-4d6f-4e09-8deb-62ac344439a9,javaHome=D:\soft\android\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\17432\.gradle\daemon,pid=79344,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+
+  Looking for a different daemon...
+Removing 0 daemon stop events from registry
+Previous Daemon (47612) stopped at Mon Dec 29 15:32:32 CST 2025 after being idle for 0 minutes and not recently used and to reclaim system physical memory
+Previous Daemon (76916) stopped at Mon Dec 29 15:45:54 CST 2025 stop command received
+Previous Daemon (75324) stopped at Mon Dec 29 15:47:21 CST 2025 stop command received
+Previous Daemon (66988) stopped at Mon Dec 29 16:17:24 CST 2025 after being idle for 3 minutes and not recently used and to reclaim system physical memory
+Starting a Gradle Daemon, 2 busy and 2 incompatible and 4 stopped Daemons could not be reused, use --status for details
+Starting process 'command 'C:\Program Files\Java\jdk-17\bin\java.exe''. Working directory: C:\Users\17432\.gradle\.tmp\tmp-jvm2063517975679152782probe Command: C:\Program Files\Java\jdk-17\bin\java.exe -Xmx32m -Xms32m -cp . JavaProbe
+Successfully started process 'command 'C:\Program Files\Java\jdk-17\bin\java.exe''
+Received JVM installation metadata from 'C:\Program Files\Java\jdk-17': {JAVA_HOME=C:\Program Files\Java\jdk-17, JAVA_VERSION=17.0.11, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=Java(TM) SE Runtime Environment, RUNTIME_VERSION=17.0.11+7-LTS-207, VM_NAME=Java HotSpot(TM) 64-Bit Server VM, VM_VERSION=17.0.11+7-LTS-207, VM_VENDOR=Oracle Corporation, OS_ARCH=amd64}
+Starting process 'Gradle build daemon'. Working directory: C:\Users\17432\.gradle\daemon\8.13 Command: C:\Program Files\Java\jdk-17\bin\java.exe --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=CN -Duser.language=zh -Duser.variant -cp C:\Users\17432\.gradle\wrapper\dists\gradle-8.13-bin\5xuhj0ry160q40clulazy9h7d\gradle-8.13\lib\gradle-daemon-main-8.13.jar -javaagent:C:\Users\17432\.gradle\wrapper\dists\gradle-8.13-bin\5xuhj0ry160q40clulazy9h7d\gradle-8.13\lib\agents\gradle-instrumentation-agent-8.13.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.13
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 1.067 secs.
+The client will now receive all logging from the daemon (pid: 64736). The daemon log file: C:\Users\17432\.gradle\daemon\8.13\daemon-64736.out.log
+Starting build in new daemon [memory: 2 GiB]
+Using 32 worker leases.
+Received JVM installation metadata from 'C:\Program Files\Java\jdk-17': {JAVA_HOME=C:\Program Files\Java\jdk-17, JAVA_VERSION=17.0.11, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=Java(TM) SE Runtime Environment, RUNTIME_VERSION=17.0.11+7-LTS-207, VM_NAME=Java HotSpot(TM) 64-Bit Server VM, VM_VERSION=17.0.11+7-LTS-207, VM_VENDOR=Oracle Corporation, OS_ARCH=amd64}
+Watching the file system is configured to be enabled if available
+Now considering [D:\project\billtandemo] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'D:\project\billtandemo\settings.gradle.kts'.
+Projects loaded. Root project using build file 'D:\project\billtandemo\build.gradle.kts'.
+Included projects: [root project 'billtandemo', project ':app']
+
+> Configure project :
+Evaluating root project 'billtandemo' using build file 'D:\project\billtandemo\build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '8.13.0', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.0.21', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file 'D:\project\billtandemo\app\build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '8.13.0']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.0.21']
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.0.21-1.0.26']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+All projects evaluated.
+Task name matched 'build'
+Selected primary task 'build' from project :
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugKotlin
+Tasks to be executed: [task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:checkDebugAarMetadata', task ':app:processDebugNavigationResources', task ':app:compileDebugNavigationResources', task ':app:generateDebugResValues', task ':app:mapDebugSourceSetPaths', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:parseDebugLocalResources', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:kspDebugKotlin', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:desugarDebugFileDependencies', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:dexBuilderDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug', task ':app:preReleaseBuild', task ':app:mergeReleaseJniLibFolders', task ':app:mergeReleaseNativeLibs', task ':app:stripReleaseDebugSymbols', task ':app:extractReleaseNativeSymbolTables', task ':app:mergeReleaseNativeDebugMetadata', task ':app:checkReleaseDuplicateClasses', task ':app:buildKotlinToolingMetadata', task ':app:checkReleaseAarMetadata', task ':app:processReleaseNavigationResources', task ':app:compileReleaseNavigationResources', task ':app:generateReleaseResValues', task ':app:mapReleaseSourceSetPaths', task ':app:generateReleaseResources', task ':app:mergeReleaseResources', task ':app:packageReleaseResources', task ':app:parseReleaseLocalResources', task ':app:createReleaseCompatibleScreenManifests', task ':app:extractDeepLinksRelease', task ':app:processReleaseMainManifest', task ':app:processReleaseManifest', task ':app:processReleaseManifestForPackage', task ':app:processReleaseResources', task ':app:kspReleaseKotlin', task ':app:compileReleaseKotlin', task ':app:javaPreCompileRelease', task ':app:compileReleaseJavaWithJavac', task ':app:dexBuilderRelease', task ':app:desugarReleaseFileDependencies', task ':app:mergeReleaseStartupProfile', task ':app:mergeExtDexRelease', task ':app:mergeDexRelease', task ':app:mergeReleaseArtProfile', task ':app:mergeReleaseGlobalSynthetics', task ':app:compileReleaseArtProfile', task ':app:mergeReleaseShaders', task ':app:compileReleaseShaders', task ':app:generateReleaseAssets', task ':app:mergeReleaseAssets', task ':app:compressReleaseAssets', task ':app:extractReleaseVersionControlInfo', task ':app:extractProguardFiles', task ':app:generateReleaseLintVitalReportModel', task ':app:lintVitalAnalyzeRelease', task ':app:lintVitalReportRelease', task ':app:lintVitalRelease', task ':app:processReleaseJavaRes', task ':app:mergeReleaseJavaResource', task ':app:optimizeReleaseResources', task ':app:collectReleaseDependencies', task ':app:sdkReleaseDependencyData', task ':app:writeReleaseAppMetadata', task ':app:writeReleaseSigningConfigVersions', task ':app:packageRelease', task ':app:createReleaseApkListingFileRedirect', task ':app:assembleRelease', task ':app:assemble', task ':app:bundleDebugClassesToCompileJar', task ':app:preDebugAndroidTestBuild', task ':app:generateDebugAndroidTestResValues', task ':app:generateDebugAndroidTestLintModel', task ':app:generateDebugLintReportModel', task ':app:preDebugUnitTestBuild', task ':app:generateDebugUnitTestLintModel', task ':app:lintAnalyzeDebug', task ':app:lintAnalyzeDebugAndroidTest', task ':app:lintAnalyzeDebugUnitTest', task ':app:lintReportDebug', task ':app:lintDebug', task ':app:lint', task ':app:bundleDebugClassesToRuntimeJar', task ':app:kspDebugUnitTestKotlin', task ':app:compileDebugUnitTestKotlin', task ':app:javaPreCompileDebugUnitTest', task ':app:compileDebugUnitTestJavaWithJavac', task ':app:processDebugUnitTestJavaRes', task ':app:testDebugUnitTest', task ':app:bundleReleaseClassesToRuntimeJar', task ':app:bundleReleaseClassesToCompileJar', task ':app:kspReleaseUnitTestKotlin', task ':app:compileReleaseUnitTestKotlin', task ':app:preReleaseUnitTestBuild', task ':app:javaPreCompileReleaseUnitTest', task ':app:compileReleaseUnitTestJavaWithJavac', task ':app:processReleaseUnitTestJavaRes', task ':app:testReleaseUnitTest', task ':app:test', task ':app:check', task ':app:build']
+Tasks that were excluded: []
+Resolve mutations for :app:preBuild (Thread[Execution worker,5,main]) started.
+:app:preBuild (Thread[Execution worker,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[Execution worker,5,main]) started.
+:app:preDebugBuild (Thread[Execution worker,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
+:app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
+
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
+:app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
+
+> Task :app:checkDebugAarMetadata
+
+Not watching anything anymore
+
+> Task :app:checkDebugAarMetadata FAILED
+1 actionable task: 1 executed
+Watched directory hierarchies: []

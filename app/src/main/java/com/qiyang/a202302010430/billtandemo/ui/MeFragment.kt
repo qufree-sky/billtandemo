@@ -98,7 +98,7 @@ class MeFragment : Fragment() {
                 val headerStyle = workbook.createCellStyle()
                 val headerFont = workbook.createFont()
                 headerFont.bold = true
-                headerFont.fontHeightInPoints = 12f
+                headerFont.fontHeightInPoints = 12.toShort()
                 headerStyle.setFont(headerFont)
                 headerStyle.alignment = HorizontalAlignment.CENTER
                 headerStyle.verticalAlignment = VerticalAlignment.CENTER
@@ -119,7 +119,7 @@ class MeFragment : Fragment() {
                     val row = sheet.createRow(rowNum++)
                     
                     // ID
-                    row.createCell(0).setCellValue(record.id)
+                    row.createCell(0).setCellValue(record.id.toString())
                     
                     // 类型
                     val typeStr = if (record.type == 1) "收入" else "支出"

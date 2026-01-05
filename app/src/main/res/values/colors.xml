@@ -5,6 +5,7 @@
     <color name="orange">#FFA500</color>
     <color name="green">#00FF00</color>
     <color name="gray">#CCCCCC</color>
+    <color name="light_gray">#F5F5F5</color>
     <color name="colorPrimary">#FF5722</color>
     <color name="colorPrimaryDark">#E64A19</color>
     <color name="colorAccent">#FF4081</color>

@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.qiyang.a202302010430.billtandemo.data.dao.BillCategoryDao
 import com.qiyang.a202302010430.billtandemo.data.dao.BillRecordDao
 import com.qiyang.a202302010430.billtandemo.data.dao.BudgetDao
@@ -19,6 +20,7 @@ import com.qiyang.a202302010430.billtandemo.data.entity.Budget
     version = 1,
     exportSchema = false
 )
+@TypeConverters(com.qiyang.a202302010430.billtandemo.data.database.TypeConverters::class)
 abstract class AppDatabase : RoomDatabase() {
     // 记账记录DAO
     abstract fun billRecordDao(): BillRecordDao
